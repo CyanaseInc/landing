@@ -1,0 +1,420 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *=========== Default theme =========== */
+/* @layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+} */
+
+/* *=========== Green theme =========== */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 43 94% 66%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+.moon{
+  font: 1em/1.5 Nunito, Helvetica, sans-serif;
+  
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+
+
+
+.stage {
+  width: 15em;
+  height: 15em;
+  position: relative;
+  transform: rotate(45deg);
+  font-size: 16px;
+  animation: zigzack 4s linear infinite alternate-reverse;
+}
+
+@keyframes zigzack {
+  0% {
+    left: 0;
+    bottom: 0;
+  }
+
+  100% {
+    left: 10px;
+    bottom: 50px;
+  }
+}
+
+.body {
+  height: 10em;
+  width: 4em;
+  background-color: #3ca7f5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100px;
+}
+
+.top {
+  position: absolute;
+  height: 2em;
+  width: 1em;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.light {
+  position: absolute;
+  height: 0.5em;
+  width: 0.5em;
+  top: -0.5em;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  animation: blink 1s linear infinite alternate-reverse;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    background-color: black;
+  }
+}
+
+.antenna {
+  position: absolute;
+  height: 1.5em;
+  width: 0.1em;
+  bottom: 0;
+  left: 50%;
+  background-color: #3ca7f5;
+  transform: translate(-50%, -50%);
+  border-radius: 100px;
+}
+.base2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 1.1em;
+  width: 0.5em;
+  background-color: #3ca7f5;
+  transform: translate(-50%, -50%);
+}
+
+.base1 {
+  position: absolute;
+  height: 0.9em;
+  width: 1em;
+  bottom: 0;
+  left: 50%;
+  background-color: #3ca7f5;
+  transform: translate(-50%, -50%);
+}
+
+.glass {
+  position: absolute;
+  height: 3em;
+  width: 2em;
+  background: url('https://i.postimg.cc/sD7SQ2y3/giphy-2.gif') ;
+  border-radius: 20px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reflection {
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: white;
+  border-radius: 3px;
+  right: 0.2em;
+  top: 0.5em;
+  filter: blur(0.06em);
+}
+
+.flag {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.boster {
+  position: absolute;
+  height: 6em;
+  width: 2em;
+  background-color: #b4d3e9;
+
+  border-radius: 7px;
+  z-index: 2;
+}
+.bosterL {
+  bottom: 0em;
+  left: -1em;
+}
+.bosterL p{
+  transform: rotate(-90deg);
+  position: relative;
+  top: 30px;
+  font-size: 9px;
+  font-weight: 1000;
+  white-space:nowrap;
+  display: inline-block;
+}
+.bosterR {
+  bottom: 0em;
+  right: -1em;
+}
+
+.bosterR p{
+  transform: rotate(-90deg);
+  position: relative;
+  top: 27px;
+  font-size: 9px;
+  font-weight: 1000;
+}
+.ring {
+  position: absolute;
+  height: 1em;
+  width: 4em;
+  background-color: #252859;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s1 {
+  height: 0.5em;
+  width: 0.2em;
+  background-color: black;
+}
+
+.fire {
+  position: absolute;
+  height: 5em;
+  width: 4em;
+  bottom: -5em;
+  display: flex;
+  justify-content: space-around;
+  z-index: 0;
+}
+
+.flame {
+  position: relative;
+  top: -0.3em;
+  height: 5em;
+  width: 0.5em;
+  background-color: #f6a728;
+  border-radius: 1px;
+}
+
+.flame.h1 {
+  height: 4em;
+  animation: flameGrowH1 0.5s linear 0.5s infinite alternate-reverse;
+}
+
+.flame.h2 {
+  height: 3em;
+  animation: flameGrowH2 0.5s linear 1s infinite alternate-reverse;
+  background-color: #f66928;
+}
+
+.flame.h3 {
+  height: 5em;
+  animation: flameGrowH3 0.5s linear 1.2s infinite alternate-reverse;
+}
+
+.flame.h4 {
+  height: 5em;
+  animation: flameGrowH3 0.4s linear 1s infinite alternate-reverse;
+  background-color: #f66928;
+}
+
+.flame.h5 {
+  height: 5em;
+  animation: flameGrowH3 0.6s linear 1.5s infinite alternate-reverse;
+}
+
+@keyframes flameGrowH1 {
+  0% {
+    height: 4em;
+  }
+
+  100% {
+    height: 6em;
+  }
+}
+
+@keyframes flameGrowH2 {
+  0% {
+    height: 4em;
+  }
+
+  100% {
+    height: 6em;
+  }
+}
+@keyframes flameGrowH3 {
+  0% {
+    height: 4em;
+  }
+
+  100% {
+    height: 6em;
+  }
+}
+.animated-heading {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    right: 10
+}
+.animated-heading h1 {
+  position: absolute;
+    color: #fff;
+    font-weight: 600;
+font-size: 25px;
+    top: 70%;
+  font-family: 'IBM Plex Sans', sans serif;
+}
+span#words {
+    font-weight: 1000;
+  background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+to {
+      background-position: 200% center;
+background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+    }
+  }
+
+
+span#words button{
+  background: #00E676;
+  color: transparent;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+}
